@@ -1,0 +1,34 @@
+.container {
+  max-width: 1200px;
+  display: flex;
+  height: 100vh;
+}
+
+.container div {
+  border: 1px solid #ccc;
+}
+
+.left {
+  min-width: 200px;
+}
+
+.middle {
+  min-width: 100px;
+  flex-grow: 1;
+}
+
+.right {
+  min-width: 300px;
+}
+
+
+@media (max-width: 600px) {
+  .container {
+    overflow-x: scroll;
+  }
+}
+
+p {
+  margin: 0;
+}
+

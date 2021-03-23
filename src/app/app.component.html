@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="left">
+    <input type="text" placeholder="Enter some integer!" [(ngModel)]="_input" (input)="calculateResult()">
+  </div>
+  <div class="middle">
+    <select name="calculation" id="cal" [(ngModel)]="selectedOption" (change)="calculateResult()">
+      <option value="isPrime">isPrime</option>
+      <option value="isFibonacci">isFibonacci</option>
+    </select>
+  </div>
+  <div class="right">
+    <p *ngIf="result; else notTrue">
+      True
+    </p>
+    <ng-template #notTrue>
+      False
+    </ng-template>
+  </div>
+</div>
